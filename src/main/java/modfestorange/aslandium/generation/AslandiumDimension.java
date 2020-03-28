@@ -13,6 +13,7 @@ import net.minecraft.world.biome.source.FixedBiomeSourceConfig;
 import net.minecraft.world.dimension.Dimension;
 import net.minecraft.world.dimension.DimensionType;
 import net.minecraft.world.gen.chunk.ChunkGenerator;
+import net.minecraft.world.gen.chunk.ChunkGeneratorConfig;
 import net.minecraft.world.gen.chunk.ChunkGeneratorType;
 import net.minecraft.world.gen.chunk.FlatChunkGeneratorConfig;
 
@@ -25,16 +26,14 @@ public class AslandiumDimension extends Dimension {
 
   @Override public ChunkGenerator<?> createChunkGenerator() {
     // TODO replace with actual generation
-    FlatChunkGeneratorConfig generatorConfig =
-        FlatChunkGeneratorConfig.getDefaultConfig();
+    ChunkGeneratorConfig generatorConfig = new ChunkGeneratorConfig();
     // The biome everywhere will be jungle
     FixedBiomeSourceConfig biomeConfig =
         BiomeSourceType.FIXED.getConfig(world.getLevelProperties())
             .setBiome(Biomes.JUNGLE);
-    return ChunkGeneratorType.FLAT
-        .create(world, BiomeSourceType.FIXED.applyConfig(biomeConfig),
-            generatorConfig);
 
+    return new AslandiumChunkGenerator(world,
+        BiomeSourceType.FIXED.applyConfig(biomeConfig), generatorConfig);
   }
 
   @Nullable @Override public BlockPos getSpawningBlockInChunk(ChunkPos chunkPos,
