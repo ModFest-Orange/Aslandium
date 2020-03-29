@@ -18,11 +18,11 @@ import org.checkerframework.checker.units.qual.K;
 
 public class AslandiumChunkGenerator
     extends ChunkGenerator<ChunkGeneratorConfig> {
-  private static final int TOP_LAYER_START = 144;
-  private static final int TOP_LAYER_END = 208;
-  private static final int MID_LAYER_START = 64;
-  private static final int MID_LAYER_SURFACE = 96;
-  private static final int BOTTOM_LAYER_START = 0;
+  public static final int TOP_LAYER_START = 144;
+  public static final int TOP_LAYER_END = 208;
+  public static final int MID_LAYER_START = 64;
+  public static final int MID_LAYER_SURFACE = 96;
+  public static final int BOTTOM_LAYER_START = 0;
   private static final long SEED_XOR_MASK = 0x766f6c64656d6170L;
 
   ChunkRandom random;
