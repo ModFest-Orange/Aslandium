@@ -1,5 +1,6 @@
 package modfestorange.aslandium.generation;
 
+import modfestorange.aslandium.generation.biomes.AslandiumBiomeSource;
 import net.fabricmc.api.EnvType;
 import net.fabricmc.api.Environment;
 import net.minecraft.util.math.BlockPos;
@@ -27,13 +28,9 @@ public class AslandiumDimension extends Dimension {
   @Override public ChunkGenerator<?> createChunkGenerator() {
     // TODO replace with actual generation
     ChunkGeneratorConfig generatorConfig = new ChunkGeneratorConfig();
-    // The biome everywhere will be jungle
-    FixedBiomeSourceConfig biomeConfig =
-        BiomeSourceType.FIXED.getConfig(world.getLevelProperties())
-            .setBiome(Biomes.JUNGLE);
 
-    return new AslandiumChunkGenerator(world,
-        BiomeSourceType.FIXED.applyConfig(biomeConfig), generatorConfig);
+    return new AslandiumChunkGenerator(world, new AslandiumBiomeSource(),
+        generatorConfig);
   }
 
   @Nullable @Override public BlockPos getSpawningBlockInChunk(ChunkPos chunkPos,
