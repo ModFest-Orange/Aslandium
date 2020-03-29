@@ -14,7 +14,6 @@ import net.minecraft.world.chunk.Chunk;
 import net.minecraft.world.gen.ChunkRandom;
 import net.minecraft.world.gen.chunk.ChunkGenerator;
 import net.minecraft.world.gen.chunk.ChunkGeneratorConfig;
-import org.checkerframework.checker.units.qual.K;
 
 public class AslandiumChunkGenerator
     extends ChunkGenerator<ChunkGeneratorConfig> {
