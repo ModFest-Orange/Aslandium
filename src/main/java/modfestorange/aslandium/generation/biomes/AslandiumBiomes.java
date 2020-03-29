@@ -13,4 +13,8 @@ public class AslandiumBiomes {
   public static final Biome BOTTOM_LAYER = Registry.register(Registry.BIOME,
       new Identifier(AslandiumMod.MOD_ID, "bottom_layer"),
       new BottomLayerBiome());
+
+  public static void register() {
+    //
+  }
 }

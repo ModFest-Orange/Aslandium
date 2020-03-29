@@ -23,9 +23,6 @@ dependencies {
 	modImplementation "net.fabricmc.fabric-api:fabric-api:${project.fabric_version}"
 
 	compileOnly ("com.google.code.findbugs:jsr305:3.0.2") { transitive = false }
-
-	modRuntime "io.github.prospector:modmenu:1.10.2+build.32"
-	modRuntime "me.shedaniel:RoughlyEnoughItems:4.1.1-unstable"
 }
 
 processResources {

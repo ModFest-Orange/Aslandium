@@ -15,8 +15,7 @@ import net.minecraft.world.gen.ChunkRandom;
 import net.minecraft.world.gen.chunk.ChunkGenerator;
 import net.minecraft.world.gen.chunk.ChunkGeneratorConfig;
 
-public class AslandiumChunkGenerator
-    extends ChunkGenerator<ChunkGeneratorConfig> {
+public class AslandiumChunkGenerator extends ChunkGenerator<ChunkGeneratorConfig> {
   public static final int TOP_LAYER_START = 144;
   public static final int TOP_LAYER_END = 208;
   public static final int MID_LAYER_START = 64;

@@ -14,8 +14,7 @@ import java.util.ArrayList;
 import java.util.Collection;
 
 public class TpxCommand {
-    public static void register(
-        CommandDispatcher<ServerCommandSource> dispatcher) {
+    public static void register(CommandDispatcher<ServerCommandSource> dispatcher) {
         dispatcher.register(CommandManager.literal("tpx")
             .requires(source -> source.hasPermissionLevel(2)).then(
                 CommandManager.argument("targets", EntityArgumentType.entities())
