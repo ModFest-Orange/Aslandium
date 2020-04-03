@@ -2,6 +2,7 @@ package modfestorange.aslandium;
 
 import modfestorange.aslandium.command.TpxCommand;
 import modfestorange.aslandium.generation.AslandiumDimensions;
+import modfestorange.aslandium.generation.features.AslandiumFeatures;
 import net.fabricmc.api.ModInitializer;
 import net.fabricmc.fabric.api.registry.CommandRegistry;
 
@@ -16,6 +17,7 @@ public class AslandiumMod implements ModInitializer {
 		System.out.println("Hello Fabric world!");
 
 		AslandiumDimensions.register();
+		AslandiumFeatures.register();
 
 		CommandRegistry.INSTANCE.register(false, TpxCommand::register);
 	}
